@@ -1,16 +1,35 @@
 #!/usr/bin/env python
-salir='no'
-while salir=='no':
-	colores = ['amarillo', 'rojo', 'azul', 'verde', 'negro', 'blanco', 'violeta', 'naranja', 'gris', 'dorado', 'plateado']
-	print 'Color'
-	color_introducido = raw_input()
-	if colores.count(color_introducido)>0:
-		print 'Felicidades, el color ' + color_introducido + ' es correcto.'
-	if colores.count (color_introducido)==0:
-		print 'No existe el color ' + color_introducido + ' , lo siento.'
-	print 'Si desea salir, teclee "si". Si no, teclee "no"'
-	salir=raw_input()
+#
+#Listas
+#
 
-if salir=='si':
-	print 'Gracias por usar el script'
-raw_input()
+list_color = ['amarillo', 'rojo', 'azul', 'verde', 'negro', 'blanco', 'violeta', 'naranja', 'gris', 'dorado', 'plateado']
+list_marca = ['coca-cola', 'nike']
+
+#
+#Plantilla
+#
+
+def comp (list, intro, clas, gen):
+		if list.count(intro)>0:
+			print 'Felicidades, ' + clas + intro + ' es correct' + gen
+		if list.count(intro)==0:
+			print 'No existe ' + clas + intro + ' , lo siento.'
+#
+#Recoleccion y comprobacion
+#
+
+#Color
+print '>Color'
+intro_color = raw_input()
+comp(list_color, intro_color, 'el color ', 'o.')
+#Marca
+print '>Marca'
+intro_marca = raw_input()
+comp(list_marca, intro_marca, 'la marca ', 'a.')
+
+#
+#Final
+#
+
+#Puntuacion
